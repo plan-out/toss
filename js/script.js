@@ -16,5 +16,24 @@
     {opacity:0},
     {opacity:1, duration:1, delay:1.6});
 
+  /*s2영역 */    
+  const s2 = gsap.timeline({
+    scrollTrigger:{
+      trigger:"#s2",
+      markers:true,
+      start:"top 60%",
+      toggleActions:"play none none reverse"
+    },
+    defaults:{
+      duration:1  //속도
+    }
+  });
+
+  s2.to("#s2 .title",{opacity:1, y:0});
+  s2.fromTo("#s2 .phone1",{opacity:0, y:50},{opacity:1, y:0});
+  s2.fromTo("#s2 .phone2",{opacity:0, y:50},{opacity:1, y:0});
+  s2.fromTo("#s2 .text",{opacity:0, y:50},{opacity:1, y:0});
+
+
  });//end
 
